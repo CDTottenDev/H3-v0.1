@@ -1,0 +1,6 @@
+@import "utils/globals.css";
+@import "components/navbar.css";
+@import "components/hero.css";
+@import "components/sections.css";
+@import "components/contactform.css";
+@import "components/font-awesome-fix.css";
