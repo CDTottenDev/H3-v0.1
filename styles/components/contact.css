@@ -1,0 +1,103 @@
+#contact-container {
+  max-width: 800px;
+  margin: 0;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1200;
+}
+
+#contact-container[popover] {
+  margin: 0;
+  padding: 30px;
+  border: none;
+}
+
+#contact-container::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Grid Layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Job Description Area */
+.job-description {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100%;
+  min-height: 200px;
+  resize: vertical;
+}
+
+/* Button Styles */
+button {
+  background-color: #2196f3;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1976d2;
+}
+
+/* Right Column Layout */
+.right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Heading Styles */
+h2 {
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-description {
+    grid-row: auto;
+  }
+}
