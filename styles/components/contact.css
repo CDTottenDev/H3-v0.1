@@ -1,5 +1,5 @@
 #contact-container {
-  max-width: 800px;
+  width: 75%;
   margin: 0;
   padding: 30px;
   background-color: white;
@@ -64,7 +64,7 @@ textarea {
 }
 
 /* Button Styles */
-button {
+.ctabtnform {
   background-color: #2196f3;
   color: white;
   padding: 12px 24px;
@@ -75,7 +75,7 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.ctabtnform:hover {
   background-color: #1976d2;
 }
 

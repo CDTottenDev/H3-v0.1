@@ -2,5 +2,11 @@
 @import "components/navbar.css";
 @import "components/hero.css";
 @import "components/sections.css";
-@import "components/contactform.css";
 @import "components/font-awesome-fix.css";
+@import "components/contact.css";
+@import "components/popover.css";
+@import "components/pagebrk.css";
+@import "components/pagebrk2.css";
+@import "components/backgrndlogo.css";
+@import "components/projectgallerycarousel.css";
+@import "components/projectsgallery.css";

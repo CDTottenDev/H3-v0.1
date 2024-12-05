@@ -1,0 +1,396 @@
+<div class="main-container">
+  <div class="sidebar">
+    <h2>Categories</h2>
+    <ul class="category-list">
+      <li>
+        <input
+          type="checkbox"
+          id="excavation"
+          name="category"
+          value="excavation"
+        />
+        <label for="excavation">Excavation</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="grading"
+          name="category"
+          value="grading"
+        />
+        <label for="grading">Grading</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="trenching"
+          name="category"
+          value="trenching"
+        />
+        <label for="trenching">Trenching</label>
+      </li>
+      <li>
+        <input type="checkbox" id="septic" name="category" value="septic" />
+        <label for="septic">Septic</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="generalcontracting"
+          name="category"
+          value="generalcontracting"
+        />
+        <label for="generalcontracting">General Contracting</label>
+      </li>
+      <li></li>
+        <input
+          type="checkbox"
+          id="concreteflatwork"
+          name="category"
+          value="concreteflatwork"
+        />
+        <label for="concreteflatwork">Concrete/Flatwork</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="roaddevelopment"
+          name="category"
+          value="roaddevelopment"
+        />
+        <label for="roaddevelopment">Road Development</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="snowremoval"
+          name="category"
+          value="snowremoval"
+        />
+        <label for="snowremoval">Snow Removal</label>
+      </li>
+      <!-- <li>
+        <input
+          type="checkbox"
+          id="beforeafter"
+          name="category"
+          value="beforeafter"
+        />
+        <label for="beforeafter">Before/After</label>
+      </li> -->
+      <li>
+        <input
+          type="checkbox"
+          id="customhome"
+          name="category"
+          value="customhome"
+        />
+        <label for="customhome">Custom Land Development</label>
+      </li>
+    </ul>
+  </div>
+  <main class="content" role="main">
+    <div class="image-grid">
+      <div class="image-card septic excavation" data-categories="excavation,septic">
+        <div class="image-container">
+          <img
+            src="/assets/images/1.2.jpg"
+            alt="Residential Project"
+            popovertarget="projectgallerycarouselpinecrest"
+            class="carousel-trigger"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Pinecrest</h3>
+          <p class="image-description">Septic, Excavation</p>
+        </div>
+      </div>
+      <div class="image-card grading generalcontracting roaddevelopment" data-categories="grading,generalcontracting,roaddevelopment">
+        <div class="image-container">
+          <img
+            src="/assets/images/cedar code/1.8.jpg"
+            alt="Commercial Building"
+            popovertarget="projectgallerycarouselcedarcode"
+            class="carousel-trigger"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Cedar Code</h3>
+          <p class="image-description">
+            Grading, General Contracting, Road Development (Fencing, Access)
+          </p>
+        </div>
+      </div>
+      <div class="image-card grading excavation" data-categories="grading,excavation">
+        <div class="image-container">
+          <img src="/assets/images/summit site/1.1.jpg" alt="Excavation Site" />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Summit Site</h3>
+          <p class="image-description">Grading, Excavation</p>
+        </div>
+      </div>
+      <div class="image-card grading excavation trenching generalcontracting" data-categories="grading,excavation,trenching,generalcontracting">
+        <div class="image-container">
+          <img src="/assets/images/riverflow/1.1.jpg" alt="Trenching Work" />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Riverflow</h3>
+          <p class="image-description">
+            Grading, Excavation, Trenching, General Contracting,
+            Concrete/Flatwork
+          </p>
+        </div>
+      </div>
+      <div class="image-card grading excavation roaddevelopment concreteflatwork" data-categories="grading,excavation,roaddevelopment,concreteflatwork">
+        <div class="image-container">
+          <img
+            src="/assets/images/mountain peak/10.jpg"
+            alt="Residential Interior"
+            popovertarget="projectgallerycarouselmountainpeak"
+            class="carousel-trigger"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Mountain Peak</h3>
+          <p class="image-description">
+            Grading, Excavation, Road Development/Access, Concrete/Flatwork
+          </p>
+        </div>
+      </div>
+      <div class="image-card grading roaddevelopment" data-categories="grading,roaddevelopment">
+        <div class="image-container">
+          <img
+            src="/assets/images/golden sands/1.jpg"
+            alt="Commercial Renovation"
+            popovertarget="projectgallerycarouselgoldendsands"
+            class="carousel-trigger"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Golden Sands</h3>
+          <p class="image-description">Grading, Road Development/Access</p>
+        </div>
+      </div>
+      <div class="image-card grading generalcontracting concreteflatwork" data-categories="grading,generalcontracting,concreteflatwork">
+        <div class="image-container">
+          <img src="/assets/images/silver brook/2.jpg" alt="Poll Barn" />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Silver Brook</h3>
+          <p class="image-description">
+            Grading, General Contracting, Concrete/Flatwork
+          </p>
+        </div>
+      </div>
+      <div class="image-card roaddevelopment generalcontracting excavation" data-categories="roaddevelopment,generalcontracting,excavation">
+        <div class="image-container">
+          <img
+            src="/assets/images/emerald grove/after.png "
+            alt="Road Development"
+            popovertarget="projectgallerycarouselemeraldgrove"
+            class="carousel-trigger"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Emerald Grove</h3>
+          <p class="image-description">
+            Road Development/Access, Excavation, General Contracting
+          </p>
+        </div>
+      </div>
+      <div class="image-card roaddevelopment generalcontracting excavation" data-categories="roaddevelopment,generalcontracting,excavation">
+        <div class="image-container">
+          <img
+            src="/assets/images/sunrise canyon/5.jpg"
+            alt="Road Development"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Sunrise Canyon</h3>
+          <p class="image-description">
+            Road Development/Access, Excavation, General Contracting (Fencing)
+          </p>
+        </div>
+      </div>
+      <div class="image-card customhome grading excavation trenching roaddevelopment concreteflatwork generalcontracting" data-categories="customhome,grading,excavation,trenching,roaddevelopment,concreteflatwork,generalcontracting">
+        <div class="image-container">
+          <img
+            src="/assets/images/azure bay/1.3.jpg"
+            alt="Custom Home Development"
+            popovertarget="projectgallerycarouselazurebay"
+            class="carousel-trigger"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Azure Bay</h3>
+          <p class="image-description">
+            Custom Home, Grading, Excavation, Trenching, Road
+            Development/Access, Concrete/Flatwork, General Contracting
+          </p>
+        </div>
+      </div>
+      <div class="image-card septic grading excavation trenching" data-categories="septic,grading,excavation,trenching">
+        <div class="image-container">
+          <img
+            src="/assets/images/amber field/4.jpg"
+            alt="Custom Home Development"
+            popovertarget="projectgallerycarouselamberfield"
+            class="carousel-trigger"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Amber Field</h3>
+          <p class="image-description">Septic, Grading, Excavation, Trenching</p>
+        </div>
+      </div>
+      <div class="image-card grading excavation roaddevelopment" data-categories="grading,excavation,roaddevelopment">
+        <div class="image-container">
+          <img
+            src="/assets/images/cobalt tides/2.jpg"
+            alt="Custom Home Development"
+            popovertarget="projectgallerycarouselcobalttides"
+            class="carousel-trigger"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Cobalt Tides</h3>
+          <p class="image-description">
+            Grading, Excavation, Road Development/Ashpalt
+          </p>
+        </div>
+      </div>
+      <div class="image-card septic excavation trenching" data-categories="septic,excavation,trenching">
+        <div class="image-container">
+          <img
+            src="/assets/images/midnight forest/8.jpg"
+            alt="Custom Home Development"
+            popovertarget="projectgallerycarouselmidnightforest"
+            class="carousel-trigger"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Midnight Forest</h3>
+          <p class="image-description">Septic, Excavation, Trenching</p>
+        </div>
+      </div>
+      <div class="image-card snowremoval" data-categories="snowremoval">
+        <div class="image-container">
+          <img
+            src="/assets/images/starlit summit/3.jpg"
+            alt="Custom Home Development"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Starlit Summit</h3>
+          <p class="image-description">Snow Removal</p>
+        </div>
+      </div>
+      <div class="image-card grading roaddevelopment" data-categories="grading,roaddevelopment">
+        <div class="image-container">
+          <img
+            src="/assets/images/frosted meadow/2.jpg"
+            alt="Custom Home Development"
+            popovertarget="projectgallerycarouselfrostedmeadow"
+            class="carousel-trigger"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Frosted Meadow</h3>
+          <p class="image-description">Grading, Road Development/Asphalt</p>
+        </div>
+      </div>
+      <div class="image-card concreteflatwork generalcontracting" data-categories="concreteflatwork,generalcontracting">
+        <div class="image-container">
+          <img
+            src="/assets/images/obsidian bluff/3.jpg"
+            alt="Custom Home Development"
+            popovertarget="projectgallerycarouselobsidianbluff"
+            class="carousel-trigger"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Obsidian Bluff</h3>
+          <p class="image-description">
+            Concrete/Flatwork, General Contracting
+          </p>
+        </div>
+      </div>
+      <div class="image-card customhome grading excavation trenching roaddevelopment concreteflatwork generalcontracting" data-categories="customhome,grading,excavation,trenching,roaddevelopment,concreteflatwork,generalcontracting">
+        <div class="image-container">
+          <img
+            src="/assets/images/fern glade/2.jpg"
+            alt="Custom Home Development"
+            popovertarget="projectgallerycarouselfernglade"
+            class="carousel-trigger"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Fern Glade</h3>
+          <p class="image-description">
+            Custom Home, Grading, Excavation, Trenching, Road
+            Development/Access, Concrete/Flatwork, General Contracting
+          </p>
+        </div>
+      </div>
+      <div class="image-card grading roaddevelopment" data-categories="grading,roaddevelopment">
+        <div class="image-container">
+          <img
+            src="/assets/images/road projects/2.jpg"
+            alt="Custom Home Development"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Road Projects</h3>
+          <p class="image-description">Road Development (Asphalt/Gravel)</p>
+        </div>
+      </div>
+      <div class="image-card concreteflatwork generalcontracting" data-categories="concreteflatwork,generalcontracting">
+        <div class="image-container">
+          <img
+            src="/assets/images/concrete projects/20.jpg"
+            alt="Custom Home Development"
+            popovertarget="projectgallerycarouselconcreteprojects"
+            class="carousel-trigger"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Concrete Projects</h3>
+          <p class="image-description">
+            Concrete/Flatwork, General Contracting
+          </p>
+        </div>
+      </div>
+      <div class="image-card generalcontracting trenching excavation septic grading" data-categories="generalcontracting,trenching,excavation,septic,grading">
+        <div class="image-container">
+          <img
+            src="/assets/images/other projects/7.jpg"
+            alt="Custom Home Development"
+            popovertarget="projectgallerycarouselotherprojects"
+            class="carousel-trigger"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-info">
+          <h3 class="image-title">Other Projects</h3>
+          <p class="image-description">
+            General Contracting, Trenching, Excavation, Septic, Grading
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

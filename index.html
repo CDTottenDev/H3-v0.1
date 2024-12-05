@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>H3 Excavation & Construction</title>
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/tailwind.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,16 +32,54 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
+    <div id="projectsgallery" popover></div>
+    <div id="background-logo-container"></div>
     <div id="navbar-container"></div>
-    <div id="popupContainer"></div>
+    <div id="contact-container" popover class="contact-popover"></div>
+    <div id="resinfo-container" popover class="info-popover"></div>
+    <div id="trenchinfo-container" popover class="info-popover"></div>
+    <div id="sepinfo-container" popover class="info-popover"></div>
+    <div id="geninfo-container" popover class="info-popover"></div>
+    <div id="excainfo-container" popover class="info-popover"></div>
+    <div id="comminfo-container" popover class="info-popover"></div>
     <div id="hero-container"></div>
+    <div id="page-break"></div>
+    <div id="container-ctaBtn">
+      <button
+        popovertarget="contact-container"
+        class="ctabtnhero"
+        id="ctabtnhero"
+      >
+        Get Job Estimate
+      </button>
+    </div>
     <div id="services"></div>
+    <div id="page-break-2"></div>
     <div id="projects"></div>
     <div id="about"></div>
     <div id="testimonials"></div>
     <div id="footer"></div>
+    <div id="projectgallerycarouselpinecrest" popover></div>
+    <div id="projectgallerycarouselconcreteprojects" popover></div>
+    <div id="projectgallerycarouselcobalttides" popover></div>
+    <div id="projectgallerycarouselcedarcode" popover></div>
+    <div id="projectgallerycarouselazurebay" popover></div>
+    <div id="projectgallerycarouselamberfield" popover></div>
+    <div id="projectgallerycarouselemeraldgrove" popover></div>
+    <div id="projectgallerycarouselfernglade" popover></div>
+    <div id="projectgallerycarouselfrostedmeadow" popover></div>
+    <div id="projectgallerycarouselgoldendsands" popover></div>
+    <div id="projectgallerycarouselmidnightforest" popover></div>
+    <div id="projectgallerycarouselmountainpeak" popover></div>
+    <div id="projectgallerycarouselobsidianbluff" popover></div>
+    <div id="projectgallerycarouselotherprojects" popover></div>
+
     <script type="module" src="scripts/main.js"></script>
     <script>
       document.fonts.ready.then(() => {

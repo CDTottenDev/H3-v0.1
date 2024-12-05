@@ -1,16 +1,19 @@
 .hero {
-  height: 100vh;
-  background: #acaba9;
+  min-height: 100vh;
+  background: #4b4b4b;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: var(--white);
+  padding: 2rem 0;
 }
 
 .hero-content {
   max-width: 800px;
   padding: 0 2rem;
+  margin-bottom: 2rem;
 }
 
 .hero-content h1 {
@@ -24,10 +27,19 @@
   margin-bottom: 2rem;
 }
 
-.cta-button {
+.hero-content em {
+  color: black;
+}
+
+.hero-content p em {
+  color: var(--primary-color);
+  font-size: 1.75rem;
+}
+
+.ctabtnhero {
   padding: 1rem 2rem;
   font-size: 1.1rem;
-  background: var(--primary-color);
+  background: rgb(212, 80, 80);
   color: var(--white);
   border: none;
   border-radius: 5px;
@@ -35,23 +47,84 @@
   transition: background 0.3s;
 }
 
-.cta-button:hover {
+.ctabtnhero:hover {
   background: var(--primary-dark);
 }
 
 .hero-image-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 1rem;
+  padding-top: 5%;
+  width: 35vw;
+  max-width: 900px;
+}
 
-  img {
-    width: 15vw;
-  }
+.hero-image {
+  opacity: 1;
+  flex: 1;
+  max-width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+
+  border-radius: 10px;
+  border: 1px solid var(--white);
+  overflow: hidden;
+}
+
+.hero-image:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.hero-image img {
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+#container-ctaBtn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2.5rem;
+  }
+
+  .hero-image-container {
+    display: none;
+  }
+
+  .hero-image {
+    max-width: 90%;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding: 1rem 0;
+  }
+
+  .hero-image-container {
+    display: none;
   }
 }
