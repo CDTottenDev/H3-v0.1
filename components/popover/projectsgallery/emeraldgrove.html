@@ -1,37 +1,35 @@
-<div class="project-gallery" id="projectgallerycarouselemeraldgrove">
-  <div class="carouselcontainer">
-    <button
-      class="close-btn"
-      onclick="document.getElementById('projectgallerycarouselemeraldgrove').hidePopover()"
-    >
-      ×
-    </button>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H3-Emerald Grove</title>
 
+    <link rel="stylesheet" href="/styles/maingallerypage.css" />
+  </head>
+  <body>
+    <button class="back-button" onclick="goBackToGallery()"></button>
+      ← Back to Gallery
+    </button>
     <div class="gallery-container">
-      <div class="gallery-wheel">
-        <div class="gallery-item">
-          <img
-            src="/assets/images/emerald grove/road-before-HD.jpg"
-            alt="Road Development/Gravel"
-          />
-        </div>
-        <div class="gallery-item">
-          <img
-            src="/assets/images/emerald grove/road-after-HD.jpg"
-            alt="Road Development/Gravel"
-          />
-        </div>
+      <div class="gallery">
+        <img
+          src="/assets/images/emerald grove/road-before-HD.jpg"
+          alt="Image 1"
+        />
+        <img
+          src="/assets/images/emerald grove/road-after-HD.jpg"
+          alt="Image 2"
+        />
       </div>
     </div>
 
-    <div class="focused-container">
-      <img
-        class="focused-image"
-        src="/assets/images/emerald grove/road-before-HD.jpg"
-        alt="Focused Project Image"
-      />
-      <button class="nav-arrow prev">❮</button>
-      <button class="nav-arrow next">❯</button>
+    <div class="modal">
+      <span class="close-button">&times;</span>
+      <img class="modal-content" src="" alt="Modal Image" />
     </div>
-  </div>
-</div>
+
+    <script src="/scripts/gallery page/projectNavigation.js"></script>
+    <script src="/scripts/maingallerypage.js"></script>
+  </body>
+</html>

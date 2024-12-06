@@ -1,40 +1,34 @@
-<div class="project-gallery" id="projectgallerycarouselamberfield">
-  <div class="carouselcontainer">
-    <button
-      class="close-btn"
-      onclick="document.getElementById('projectgallerycarouselamberfield').hidePopover()"
-    >
-      ×
-    </button>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H3-Amber Field</title>
 
+    <link rel="stylesheet" href="/styles/maingallerypage.css" />
+  </head>
+  <body>
+    <button class="back-button" onclick="goBackToGallery()"></button>
+      ← Back to Gallery
+    </button>
     <div class="gallery-container">
-      <div class="gallery-wheel">
-        <div class="gallery-item">
-          <img src="/assets/images/amber field/5.jpg" alt="New Septic System" />
-        </div>
-        <div class="gallery-item">
-          <img src="/assets/images/amber field/2.jpg" alt="Drain Field" />
-        </div>
-        <div class="gallery-item">
-          <img src="/assets/images/amber field/6.jpg" alt="Drain Field" />
-        </div>
-        <div class="gallery-item">
-          <img src="/assets/images/amber field/3.jpg" alt="Drain Field" />
-        </div>
-        <div class="gallery-item">
-          <img src="/assets/images/amber field/1.jpg" alt="Septic System" />
-        </div>
+      <div class="gallery">
+        <img src="/assets/images/amber field/1.jpg" alt="Image 1" />
+        <img src="/assets/images/amber field/2.jpg" alt="Image 2" />
+        <img src="/assets/images/amber field/3.jpg" alt="Image 3" />
+        <img src="/assets/images/amber field/4.jpg" alt="Image 4" />
+        <img src="/assets/images/amber field/5.jpg" alt="Image 5" />
+        <img src="/assets/images/amber field/6.jpg" alt="Image 6" />
+        <img src="/assets/images/amber field/7.jpg" alt="Image 7" />
       </div>
     </div>
 
-    <div class="focused-container">
-      <img
-        class="focused-image"
-        src="/assets/images/amber field/5.jpg"
-        alt="Focused Project Image"
-      />
-      <button class="nav-arrow prev">❮</button>
-      <button class="nav-arrow next">❯</button>
+    <div class="modal">
+      <span class="close-button">&times;</span>
+      <img class="modal-content" src="" alt="Modal Image" />
     </div>
-  </div>
-</div>
+
+    <script src="/scripts/gallery page/projectNavigation.js"></script>
+    <script src="/scripts/maingallerypage.js"></script>
+  </body>
+</html>

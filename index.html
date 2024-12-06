@@ -38,7 +38,6 @@
     />
   </head>
   <body>
-    <div id="projectsgallery" popover></div>
     <div id="background-logo-container"></div>
     <div id="navbar-container"></div>
     <div id="contact-container" popover class="contact-popover"></div>
@@ -65,25 +64,33 @@
     <div id="about"></div>
     <div id="testimonials"></div>
     <div id="footer"></div>
-    <div id="projectgallerycarouselpinecrest" popover></div>
-    <div id="projectgallerycarouselconcreteprojects" popover></div>
-    <div id="projectgallerycarouselcobalttides" popover></div>
-    <div id="projectgallerycarouselcedarcode" popover></div>
-    <div id="projectgallerycarouselazurebay" popover></div>
-    <div id="projectgallerycarouselamberfield" popover></div>
-    <div id="projectgallerycarouselemeraldgrove" popover></div>
-    <div id="projectgallerycarouselfernglade" popover></div>
-    <div id="projectgallerycarouselfrostedmeadow" popover></div>
-    <div id="projectgallerycarouselgoldendsands" popover></div>
-    <div id="projectgallerycarouselmidnightforest" popover></div>
-    <div id="projectgallerycarouselmountainpeak" popover></div>
-    <div id="projectgallerycarouselobsidianbluff" popover></div>
-    <div id="projectgallerycarouselotherprojects" popover></div>
 
+    <script src="scripts/gallery page/projectNavigation.js"></script>
     <script type="module" src="scripts/main.js"></script>
     <script>
       document.fonts.ready.then(() => {
         document.documentElement.classList.add("fonts-loaded");
+      });
+
+      window.addEventListener("load", function () {
+        if (sessionStorage.getItem("openGallery")) {
+          sessionStorage.removeItem("openGallery");
+
+          const galleryButton = document.querySelector(
+            '[popovertarget="projectsgallery"]'
+          );
+          if (galleryButton) {
+            setTimeout(() => {
+              galleryButton.click();
+            }, 100);
+          }
+
+          const scrollPosition = sessionStorage.getItem("scrollPosition");
+          if (scrollPosition) {
+            window.scrollTo(0, parseInt(scrollPosition));
+            sessionStorage.removeItem("scrollPosition");
+          }
+        }
       });
     </script>
   </body>
