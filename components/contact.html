@@ -1,54 +1,83 @@
-<h2>Construction Job Estimate</h2>
-<form>
-  <div class="form-grid">
-    <div class="job-description">
-      <div class="form-group">
-        <label for="jobDescription">Job Description</label>
-        <textarea
-          id="jobDescription"
-          name="jobDescription"
-          placeholder="Please describe your construction project in detail..."
-        ></textarea>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/components/contact.css" />
+  </head>
+  <body>
+    <div class="contact-container" id="contact-container">
+      <div class="popover-header">
+        <h2>Construction Job Estimate</h2>
+        <button class="close-btn">×</button>
+      </div>
+      <div class="popover-content">
+        <form>
+          <div class="form-grid">
+            <div class="job-description">
+              <div class="form-group">
+                <label for="jobDescription">Job Description</label>
+                <textarea
+                  id="jobDescription"
+                  name="jobDescription"
+                  placeholder="Please describe your construction project in detail..."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="right-column">
+              <div class="form-group">
+                <label for="projectType">Project Type</label>
+                <select id="projectType" name="projectType" required>
+                  <option value="">Select a project type</option>
+                  <option value="excavation">Excavation</option>
+                  <option value="grading-sloping">Grading/Sloping</option>
+                  <option value="trenching">Trenching</option>
+                  <option value="septic">Septic</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <button type="submit" class="ctabtnform">
+                  Send Estimate Request
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
-
-    <div class="right-column">
-      <div class="form-group">
-        <label for="projectType">Project Type</label>
-        <select id="projectType" name="projectType" required>
-          <option value="">Select a project type</option>
-          <option value="excavation">Excavation</option>
-          <option value="grading-sloping">Grading/Sloping</option>
-          <option value="trenching">Trenching</option>
-          <option value="septic">Septic</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Enter your name"
-          required
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-          required
-        />
-      </div>
-
-      <div class="form-group">
-        <button type="submit" class="ctabtnform">Send Estimate Request</button>
-      </div>
-    </div>
-  </div>
-</form>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

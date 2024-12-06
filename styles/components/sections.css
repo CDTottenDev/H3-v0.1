@@ -11,7 +11,7 @@
 section h2 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   color: var(--text-dark);
 }
 
@@ -75,62 +75,6 @@ section h2 {
   padding: 4rem 0;
 }
 
-/* Projects Section */
-.projectsbtn {
-  margin: 0 auto;
-  display: block;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  background: var(--primary-color);
-  color: var(--white);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-  margin-bottom: 2rem;
-}
-
-.projects-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.project-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px var(--shadow-light);
-  transform: translateY(200px);
-  transition: transform 0.3s, opacity 0.5s;
-  opacity: 0;
-  width: 300px;
-  height: 250px;
-}
-
-.project-card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.project-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.project-info:hover {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1.5rem;
-  background: rgba(0, 0, 0, 0.7);
-  color: var(--white);
-}
-
 /* About Section */
 .about-content {
   display: grid;
@@ -154,8 +98,10 @@ section h2 {
 }
 
 .about-image img {
-  width: 100%;
+  width: auto;
   border-radius: 10px;
+  max-height: 900px;
+  padding-left: 100px;
 }
 
 /* Testimonials Section */

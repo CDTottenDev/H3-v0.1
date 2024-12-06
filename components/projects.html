@@ -1,11 +1,28 @@
 <section id="projects" class="projects">
   <div class="section-container">
     <h2>Featured Projects</h2>
-    <button class="projectsbtn" popovertarget="projectsgallery">
+    <button
+      class="projectsbtn"
+      onclick="window.location.href='/components/popover/projectsgallery.html'"
+      style="
+        position: relative;
+        width: 100%;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+        background-color: #eb2525;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      "
+      onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 8px -1px rgba(0, 0, 0, 0.15), 0 3px 6px -1px rgba(0, 0, 0, 0.1)'; this.style.backgroundColor='#e01f1f'"
+      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'; this.style.backgroundColor='#eb2525'"
+    >
       View All Projects
     </button>
-    <div id="projectsgallery" popover>
-      <!-- Content will be loaded dynamically -->
-    </div>
   </div>
 </section>

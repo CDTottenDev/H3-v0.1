@@ -69,10 +69,44 @@
   font-size: 1.5rem;
 }
 
+@media (max-width: 1024px) {
+  .nav-content {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* #container-ctaBtn {
+    width: 100%;
+    order: 3;
+  } */
+
+  /* .cta-button {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    height: 45px;
+    font-size: 16px;
+  } */
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
+
+  .nav-content {
+    padding: 0 1rem;
+  }
+
+  #container-ctaBtn {
+    padding: 0 1rem;
+  }
+
+  /* .cta-button {
+    max-width: 250px;
+    height: 40px;
+    font-size: 14px;
+  } */
 
   .nav-links.active {
     display: flex;
@@ -92,4 +126,53 @@
   .company-logo {
     height: 40px;
   }
+}
+
+.cta-button {
+  -webkit-transition: all 0s ease-out;
+  -moz-transition: all 0s ease-out;
+  -o-transition: all 0s ease-out;
+  -ms-transition: all 0s ease-out;
+  transition: all 0s ease-out;
+  height: 35px;
+  display: block;
+  font-size: 14px;
+  color: #e22828;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+  padding: 4px 20px 0;
+  margin: 10px auto;
+  position: relative;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 15px;
+
+  /* transform: translateX(-100%); */
+  transform: translateY(1.3rem) translateX(-100%);
+}
+
+.cta-button:active {
+  top: 3px;
+}
+
+.cta-button:before {
+  content: "Contact";
+  right: 275%;
+  width: 100px;
+  height: 25px;
+  display: block;
+  position: absolute;
+  padding-top: 10px;
+  line-height: 20px;
+  top: 0px;
+  margin-left: -100px;
+  font-size: 48px;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.cta-button:active:before {
+  top: -3px;
 }

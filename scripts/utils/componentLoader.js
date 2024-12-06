@@ -1,15 +1,25 @@
 import { CONFIG } from "./config.js";
 import { initProjectGalleryCarousel } from "../components/projectgallerycarousel.js";
 
+// Add this helper function at the top
+function isPopoverSupported() {
+  return HTMLElement.prototype.hasOwnProperty("showPopover");
+}
+
 export async function loadEssentialComponents(components) {
   const loadPromises = components.map(async ({ id, file }) => {
     const element = document.getElementById(id);
-    if (!element) return;
+    if (!element) {
+      // Create the element if it doesn't exist
+      const newElement = document.createElement("div");
+      newElement.id = id;
+      document.body.appendChild(newElement);
+    }
 
     try {
       const response = await fetch(`${CONFIG.COMPONENT_PATH}/${file}`);
       const html = await response.text();
-      element.innerHTML = html;
+      document.getElementById(id).innerHTML = html;
     } catch (error) {
       console.error(`Failed to load component ${file}:`, error);
     }
@@ -19,11 +29,13 @@ export async function loadEssentialComponents(components) {
 }
 
 export async function loadComponents() {
-  // Define essential components that should load immediately
   const essentialComponents = [
+    { id: "background-logo-container", file: "backgndlogo.html" },
     { id: "navbar-container", file: "navbar.html" },
     { id: "hero-container", file: "hero.html" },
+    { id: "page-break", file: "pagebrk.html" },
     { id: "services", file: "services.html" },
+    { id: "page-break-2", file: "pagebrk2.html" },
     { id: "projects", file: "projects.html" },
     { id: "about", file: "about.html" },
     { id: "testimonials", file: "testimonials.html" },
@@ -31,7 +43,39 @@ export async function loadComponents() {
   ];
 
   await loadEssentialComponents(essentialComponents);
-  initLazyPopovers();
+
+  setTimeout(() => {
+    initLazyPopovers();
+  }, 100);
+}
+
+function showElement(element) {
+  try {
+    if (isPopoverSupported() && element.matches("[popover]")) {
+      element.showPopover();
+    } else {
+      element.style.display = "block";
+      element.classList.add("fallback-open");
+    }
+  } catch (error) {
+    console.log("Fallback to basic display");
+    element.style.display = "block";
+    element.classList.add("fallback-open");
+  }
+}
+
+function hideElement(element) {
+  try {
+    if (isPopoverSupported() && element.matches("[popover]")) {
+      element.hidePopover();
+    } else {
+      element.style.display = "none";
+      element.classList.remove("fallback-open");
+    }
+  } catch (error) {
+    element.style.display = "none";
+    element.classList.remove("fallback-open");
+  }
 }
 
 function initLazyPopovers() {
@@ -46,6 +90,12 @@ function initLazyPopovers() {
         return;
       }
 
+      // If it's the contact form, handle it directly
+      if (targetId === "contact-container") {
+        showElement(popover);
+        return;
+      }
+
       if (!popover.hasContent) {
         try {
           let file;
@@ -54,7 +104,6 @@ function initLazyPopovers() {
               .replace("projectgallerycarousel", "")
               .toLowerCase();
             file = `popover/projectsgallery/${projectName}.html`;
-            console.log("Loading carousel:", file);
           } else {
             file =
               targetId === "projectsgallery"
@@ -70,7 +119,6 @@ function initLazyPopovers() {
           popover.innerHTML = html;
           popover.hasContent = true;
 
-          // Initialize carousel after content is loaded
           if (targetId.includes("projectgallerycarousel")) {
             setTimeout(() => initProjectGalleryCarousel(popover), 100);
           }
@@ -80,7 +128,7 @@ function initLazyPopovers() {
         }
       }
 
-      popover.showPopover();
+      showElement(popover);
     });
   });
 }

@@ -40,7 +40,6 @@
   <body>
     <div id="background-logo-container"></div>
     <div id="navbar-container"></div>
-    <div id="contact-container" popover class="contact-popover"></div>
     <div id="resinfo-container" popover class="info-popover"></div>
     <div id="trenchinfo-container" popover class="info-popover"></div>
     <div id="sepinfo-container" popover class="info-popover"></div>
@@ -49,15 +48,6 @@
     <div id="comminfo-container" popover class="info-popover"></div>
     <div id="hero-container"></div>
     <div id="page-break"></div>
-    <div id="container-ctaBtn">
-      <button
-        popovertarget="contact-container"
-        class="ctabtnhero"
-        id="ctabtnhero"
-      >
-        Get Job Estimate
-      </button>
-    </div>
     <div id="services"></div>
     <div id="page-break-2"></div>
     <div id="projects"></div>
@@ -65,32 +55,10 @@
     <div id="testimonials"></div>
     <div id="footer"></div>
 
-    <script src="scripts/gallery page/projectNavigation.js"></script>
     <script type="module" src="scripts/main.js"></script>
     <script>
       document.fonts.ready.then(() => {
         document.documentElement.classList.add("fonts-loaded");
-      });
-
-      window.addEventListener("load", function () {
-        if (sessionStorage.getItem("openGallery")) {
-          sessionStorage.removeItem("openGallery");
-
-          const galleryButton = document.querySelector(
-            '[popovertarget="projectsgallery"]'
-          );
-          if (galleryButton) {
-            setTimeout(() => {
-              galleryButton.click();
-            }, 100);
-          }
-
-          const scrollPosition = sessionStorage.getItem("scrollPosition");
-          if (scrollPosition) {
-            window.scrollTo(0, parseInt(scrollPosition));
-            sessionStorage.removeItem("scrollPosition");
-          }
-        }
       });
     </script>
   </body>

@@ -6,6 +6,5 @@ function openProjectPage(projectId) {
 
 function goBackToGallery() {
   console.log("Going back to gallery");
-  sessionStorage.setItem("openGallery", "true");
-  window.location.href = "/index.html";
+  window.location.href = "/components/popover/projectsgallery.html";
 }
