@@ -58,86 +58,77 @@ function initContactForm() {
 }
 
 window.openContactForm = function () {
-  // Create a modal/popup container
   const modal = document.createElement("div");
   modal.className = "modal";
 
-  // Set the HTML content directly
+  // Updated HTML to match contact.html structure
   modal.innerHTML = `
-    <div class="contact-container">
+    <div class="contact-container" id="contact-container">
       <div class="popover-header">
         <h2>Construction Job Estimate</h2>
         <button class="close-btn">×</button>
       </div>
       <div class="popover-content">
-        <form>
+        <form action="https://formspree.io/f/xnnqyngz" method="POST" class="contact-form" id="contact-form">
           <div class="form-grid">
-            <div class="job-description">
-              <div class="form-group">
-                <label for="jobDescription">Job Description</label>
-                <textarea
-                  id="jobDescription"
-                  name="jobDescription"
-                  placeholder="Please describe your construction project in detail..."
-                ></textarea>
-              </div>
+            <div class="form-group job-description">
+              <label for="message">Job Description</label>
+              <textarea name="message" id="message" rows="8" required></textarea>
             </div>
 
-            <div class="right-column">
-              <div class="form-group">
-                <label for="projectType">Project Type</label>
-                <select id="projectType" name="projectType" required>
-                  <option value="">Select a project type</option>
-                  <option value="excavation">Excavation</option>
-                  <option value="grading-sloping">Grading/Sloping</option>
-                  <option value="trenching">Trenching</option>
-                  <option value="septic">Septic</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Enter your phone number"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <button type="submit" class="ctabtnform">
-                  Send Estimate Request
-                </button>
-              </div>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" name="phone" id="phone" required />
+            </div>
+
+            <div class="form-group">
+              <label for="location">Location</label>
+              <input type="text" name="location" id="location" required />
             </div>
           </div>
+
+          <button type="submit" class="submit-button">Send Message</button>
         </form>
       </div>
     </div>
   `;
 
-  // Add modal to page
+  // Add form submission handler
+  const form = modal.querySelector("#contact-form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          form.reset();
+          alert("Message sent successfully!");
+          document.body.removeChild(modal); // Close the modal after successful submission
+        } else {
+          alert("Error sending message. Please try again.");
+        }
+      })
+      .catch((error) => {
+        alert("Error sending message. Please try again.");
+      });
+  });
+
   document.body.appendChild(modal);
 
   // Add event listener to close button
