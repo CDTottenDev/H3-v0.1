@@ -28,18 +28,18 @@
 }
 
 .hero-content em {
-  color: black;
+  color: rgb(233, 23, 23);
 }
 
 .hero-content p em {
-  color: var(--primary-color);
+  color: rgb(233, 23, 23);
   font-size: 1.75rem;
 }
 
 .ctabtnhero {
   padding: 1rem 2rem;
   font-size: 1.1rem;
-  background: rgb(212, 80, 80);
+  background: rgb(233, 23, 23);
   color: var(--white);
   border: none;
   border-radius: 5px;
@@ -97,21 +97,48 @@
   z-index: 1000;
 }
 
+.mobile-hero-image {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  .hero {
+    background: none;
+    position: relative;
+  }
+
+  .mobile-hero-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .mobile-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 10px;
+  }
+
   .hero-content h1 {
     font-size: 2.5rem;
-  }
-
-  .hero-image-container {
-    display: none;
-  }
-
-  .hero-image {
-    max-width: 90%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   .hero-content p {
     font-size: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 }
 
